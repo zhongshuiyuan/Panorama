@@ -93,6 +93,8 @@ function changeVilla() {
         $(".loading").show();
         var b = IsPC() ? "pano": "mobile";
         currentLoadIndex = 0;
+        //front,back,bottom,top,left,right
+        //或right,left,top,bottom,back,front
         var a = [loadTexture(load_url + "/" + villaId + "/" + name_arr[index] + "/" + b + "_f.jpg"), loadTexture(load_url + "/" + villaId + "/" + name_arr[index] + "/" + b + "_b.jpg"), loadTexture(load_url + "/" + villaId + "/" + name_arr[index] + "/" + b + "_u.jpg"), loadTexture(load_url + "/" + villaId + "/" + name_arr[index] + "/" + b + "_d.jpg"), loadTexture(load_url + "/" + villaId + "/" + name_arr[index] + "/" + b + "_l.jpg"), loadTexture(load_url + "/" + villaId + "/" + name_arr[index] + "/" + b + "_r.jpg")];
         var c = new THREE.Mesh(new THREE.BoxGeometry(300, 300, 300, 7, 7, 7), new THREE.MultiMaterial(a));
         c.scale.x = -1;
